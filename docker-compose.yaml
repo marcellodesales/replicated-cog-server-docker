@@ -4,8 +4,9 @@ services:
 
   # Adding the base image for cog
   replicated-cog-base:
-    image: marcellodesales/nvidea-cuda-ubuntu
+    image: marcellodesales/replicated-cog-server:python3.8_nvidea1.11.1
     build:
       context: .
       args:
+        # TODO: Add the value of python to the version (python 3.8)
         NVIDEA_CUDA_BASE_IMAGE: marcellodesales/nvidea-cuda-ubuntu:master-d19ff2d
