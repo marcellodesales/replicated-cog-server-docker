@@ -7,6 +7,7 @@ COPY cog-0.0.1.dev-py3-none-any.whl /tmp/cog-0.0.1.dev-py3-none-any.whl
 # Install from the file https://www.mssqltips.com/sqlservertip/6802/create-wheel-file-python-package-distribute-custom-code/
 RUN pip install /tmp/cog-0.0.1.dev-py3-none-any.whl
 
-WORKDIR /marcellodesales/replicated/cog/app
+# Just a homedir for the modeles
+WORKDIR /marcellodesales/replicated/cog/ml-app
 
 CMD ["python3", "--version"]
