@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+
+  # Adding the base image for cog
+  replicated-cog-base:
+    image: marcellodesales/nvidea-cuda-ubuntu
+    build:
+      context: .
+      args:
+        NVIDEA_CUDA_BASE_IMAGE: marcellodesales/nvidea-cuda-ubuntu:master-d19ff2d
